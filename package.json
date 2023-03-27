@@ -5,6 +5,7 @@
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
+    "start": "electron .",
     "publish": "electron-builder -p always"
   },
   "devDependencies": {
@@ -17,7 +18,7 @@
     "electron-updater": "^4.3.9"
   },
   "build": {
-    "appId": "com.github.iffy.electronupdaterexample",
+    "appId": "github.com.mahesur.Electron-Auto-Update",
     "afterSign": "./build/notarize.js",
     "mac": {
       "category": "your.app.category.type"
@@ -31,6 +32,11 @@
     "linux": {
       "category": "your.app.category.type",
       "target": "AppImage"
-    }
+    },
+    "publish": [{
+      "provider": "github",
+      "owner": "mahesur",
+      "repo":"Electron-Auto-Update"
+    }]
   }
 }

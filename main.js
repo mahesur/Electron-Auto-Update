@@ -91,6 +91,7 @@ autoUpdater.on('download-progress', (progressObj) => {
   sendStatusToWindow(log_message);
 })
 autoUpdater.on('update-downloaded', (info) => {
+  autoUpdater.quitAndInstall();
   sendStatusToWindow('Update downloaded');
 });
 app.on('ready', function() {
